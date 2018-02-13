@@ -1,6 +1,6 @@
-# DrawingApp
+# DrawingApp v.1.0
 C# WPF app for drawing. <br>
-Version 1.
+Developed with Microsoft Visual Studio Community 2017 version 15.5.2
 
 Capabilities:
 1. Select the colour and ink thickness.
