@@ -4,7 +4,7 @@ Developed with Microsoft Visual Studio Community 2017 version 15.5.2
 
 Capabilities:
 1. Select the colour and ink thickness.
-2. Save file, re-open it and.
+2. Save file, re-open it and edit.
 3. Export in 1 of 4 different formats.
 
 Features:
