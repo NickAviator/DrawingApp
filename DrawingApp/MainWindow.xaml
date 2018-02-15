@@ -21,6 +21,7 @@
                 <InkCanvas HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="350"/>
             </InkCanvas>
         </Grid>
+        
         <Button x:Name="buttonOpen" Content="Open" Margin="10,25,0,0" Click="ButtonOpen_Click" MouseEnter="AboutOpen_Enter" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
         <Button x:Name="buttonSave" Content="Save" Margin="10,85,0,0" Click="ButtonSave_Click" MouseEnter="AboutSave_Enter" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
         <Button x:Name="buttonExport" Content="Export" Margin="10,145,0,0" Click="ButtonExport_Click" MouseEnter="AboutExport_Enter" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
