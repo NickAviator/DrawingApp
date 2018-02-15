@@ -16,9 +16,11 @@
                 <GradientStop Color="#FF00E9FF"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <InkCanvas x:Name="inkCanvas1" Margin="155,10,10,10">
-            <InkCanvas HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="350"/>
-        </InkCanvas>
+        <Grid Margin="149,10,10,10">
+            <InkCanvas x:Name="inkCanvas1" Margin="10">
+                <InkCanvas HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="350"/>
+            </InkCanvas>
+        </Grid>
         <Button x:Name="buttonOpen" Content="Open" Margin="10,25,0,0" Click="ButtonOpen_Click" MouseEnter="AboutOpen_Enter" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
         <Button x:Name="buttonSave" Content="Save" Margin="10,85,0,0" Click="ButtonSave_Click" MouseEnter="AboutSave_Enter" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
         <Button x:Name="buttonExport" Content="Export" Margin="10,145,0,0" Click="ButtonExport_Click" MouseEnter="AboutExport_Enter" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
