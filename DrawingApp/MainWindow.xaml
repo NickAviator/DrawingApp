@@ -16,48 +16,28 @@
                 <GradientStop Color="#FF00E9FF"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Grid Margin="149,10,10,10">
-            <InkCanvas x:Name="inkCanvas1" Margin="10">
-                <InkCanvas HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="350"/>
-            </InkCanvas>
+        <Grid Margin="10,45,10,10">
+            <InkCanvas x:Name="inkCanvas1"/>
         </Grid>
-        
-        <Button x:Name="buttonOpen" Content="Open" Margin="10,25,0,0" Click="ButtonOpen_Click" MouseEnter="AboutOpen_Enter" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
-        <Button x:Name="buttonSave" Content="Save" Margin="10,85,0,0" Click="ButtonSave_Click" MouseEnter="AboutSave_Enter" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
-        <Button x:Name="buttonExport" Content="Export" Margin="10,145,0,0" Click="ButtonExport_Click" MouseEnter="AboutExport_Enter" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
-        <Button x:Name="buttonClear" Content="Clear" Margin="10,450,0,0" Click="ButtonClear_Click" HorizontalAlignment="Left" Width="124" Height="30" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
-        <Button x:Name="buttonClose" Content="Close" Margin="10,510,0,0" Click="ButtonClose_Click" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
-
-        <Slider x:Name="sld_RedColor" Minimum="0" Maximum="255" Margin="10,230,0,0" ValueChanged="sld_Color_ValueChanged" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124">
-            <Slider.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="Red" Offset="1"/>
-                    <GradientStop Color="White" Offset="0.02"/>
-                </LinearGradientBrush>
-            </Slider.Background>
-        </Slider>
-        <Slider x:Name="sld_GreenColor" Minimum="0" Maximum="255" Margin="10,260,0,0" ValueChanged="sld_Color_ValueChanged" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124">
-            <Slider.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FF00CF13" Offset="1"/>
-                </LinearGradientBrush>
-            </Slider.Background>
-        </Slider>
-        <Slider x:Name="sld_BlueColor" Minimum="0" Maximum="255" Margin="10,290,0,0" ValueChanged="sld_Color_ValueChanged" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="124">
-            <Slider.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FF000CFF" Offset="1"/>
-                </LinearGradientBrush>
-            </Slider.Background>
-        </Slider>
-
-        <Label x:Name="lbl1" Content="" Margin="110,324,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="24"/>
-        <Label x:Name="lblInf1" Content="Color selected" Margin="10,324,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" FontSize="14"/>
-        <Slider x:Name="sld_Thickness" HorizontalAlignment="Left" Margin="10,396,0,0" VerticalAlignment="Top" Width="124" Minimum="1" Maximum="15" ValueChanged="sld_Thickness_ValueChanged" Height="18" Foreground="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
-        <Label x:Name="lblInf2" Content="Tickness" Margin="10,365,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85" FontSize="14"/>
-        <Label x:Name="lbl2" Content="" Margin="110,409,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="24" RenderTransformOrigin="0.625,3.885"/>
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Left" Background="White">
+            <MenuItem Header="File" Width="35" Height="25">
+                <MenuItem Header="Open" Name="ItemOpen" Background="White" Click="ItemOpen_Click" MouseEnter="AboutOpen_Enter">
+                </MenuItem>
+                <MenuItem Header="Save" Name="ItemSave" Background="White" Click="ItemSave_Click" MouseEnter="AboutSave_Enter">
+                </MenuItem>
+                <MenuItem Header="Export" Name="ItemExport"  Background="White" Click="ItemExport_Click" MouseEnter="AboutExport_Enter">
+                </MenuItem>
+                <MenuItem Header="Exit" Name="ItemExit" Background="White" Click="ItemExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit" Width="35" Height="25">
+                <MenuItem Header="Clear All" Name="Clear" Background="White" Click="EditClear_Click">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Tools" Width="45" Height="25">
+                <MenuItem Header="Palette" Name="Palette" Background="White" Click="ToolsOpen_Click">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="About" Width="50" Height="25"/>
+        </Menu>
     </Grid>
 </Window>

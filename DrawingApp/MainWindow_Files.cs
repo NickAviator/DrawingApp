@@ -6,10 +6,11 @@ using System.Windows.Controls;
 using System.Windows.Ink;
 using System.Windows.Media.Imaging;
 using Microsoft.Win32;
+using System.Runtime;
 
 namespace WpfApp1
 {
-    public class FileDialog : MainWindow
+    public partial class MainWindow 
     {
         FileStream myfileStream = null;
         Stream myStream = null;
@@ -22,6 +23,7 @@ namespace WpfApp1
             FilterIndex = 2,
             RestoreDirectory = true
         };
+
         SaveFileDialog saveFileDialog1 = new SaveFileDialog
         {
             InitialDirectory = Directory.GetCurrentDirectory(),
@@ -30,7 +32,7 @@ namespace WpfApp1
             RestoreDirectory = true
         };
 
-        private void ButtonOpen_Click(object sender, RoutedEventArgs e)
+        private void ItemOpen_Click(object sender, RoutedEventArgs e)
         {
             if (openFileDialog1.ShowDialog() == true)
             {
@@ -51,7 +53,7 @@ namespace WpfApp1
             }
         }
 
-        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        private void ItemSave_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -69,7 +71,7 @@ namespace WpfApp1
             }
         }
 
-        private void ButtonExport_Click(object sender, RoutedEventArgs e)
+        private void ItemExport_Click(object sender, RoutedEventArgs e)
         {
             if (saveFileDialog1.ShowDialog() == true)
             {
@@ -79,7 +81,6 @@ namespace WpfApp1
                     RenderTargetBitmap rtb = new RenderTargetBitmap((int)inkCanvas1.ActualWidth, (int)inkCanvas1.ActualHeight, 96d, 96d, PixelFormats.Default);
                     rtb.Render(inkCanvas1);
 
-                    //This encoding makes unavaliable to open image in inkCanvas1 
                     PngBitmapEncoder pngEnc = new PngBitmapEncoder();
                     pngEnc.Frames.Add(BitmapFrame.Create(rtb));
                     pngEnc.Save(myfileStream);
@@ -94,36 +95,6 @@ namespace WpfApp1
                     myfileStream.Close();
                 }
             }
-        }
-
-        protected override void ButtonOpen_Click()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void ButtonSave_Click()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void ButtonExport_Click()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void AboutOpen_Enter()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void AboutSave_Enter()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void AboutExport_Enter()
-        {
-            throw new NotImplementedException();
         }
     }
 }
